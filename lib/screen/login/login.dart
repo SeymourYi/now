@@ -496,7 +496,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextField(
                       controller: _passwordController,
-                      obscureText: true,
+                      obscureText: false,
+                      keyboardType: TextInputType.text,
                       style: TextStyle(color: Colors.black87, fontSize: 16),
                       decoration: InputDecoration(
                         hintText: "密码",

@@ -5,8 +5,8 @@ class SmsLoginService {
   Future<Map<String, dynamic>> smsLogin(String phone) async {
     try {
       var response = await HttpClient.dio.post(
-        "/user/login",
-        data: {"username": phone, "phoneNumber": phone},
+        "/user/login?username=${phone}",
+        // data: {"username": phone, "phoneNumber": phone},
         options: Options(
           contentType: 'application/json; charset=utf-8',
           headers: {"Content-Type": "application/json; charset=utf-8"},
